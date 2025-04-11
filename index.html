@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Cambodia Tourism Website</title>
+    <link rel="stylesheet" href="CSS/home.css">
+</head>
+<body>
+    <header class="header">
+
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+        <nav class="nav-links">
+            <a href="index.html" class="title active">Home</a>
+            <a href="about.html" class="title">About</a>
+            <a href="contact.html" class="title">Contact</a>
+            <a href="info.html" class="title">More</a>
+        </nav>
+        
+        <a href="login.html" target="_blank" class="sign-in" >Sign In</a>
+    </header>
+
+    <div class="Container">
+        <div class="Logo">
+            <a href="index.html">
+                <img src="Image/Angkorwat-Logo.png" alt="Logo"> <br>
+            </a> 
+           
+        </div>
+        <div class="Web-Name">
+            <h1>Cambodia</h1> <br>
+            <span>Your Gateway to the Heart of Cambodia</span>
+            <p>Welcome to our website! Embark on a journey through Cambodia’s incredible landscapes, from the bustling streets of Phnom Penh to the serene temples of Angkor Wat.</p>
+        </div>
+        <div class="btn-Search">
+            <input type="search" placeholder="Search" aria-label="Search" id="searchInput" oninput="filterFunction()">
+            <div id="suggestions" class="suggestions"></div>
+            <button>Search</button>
+        </div>   
+        <script>
+            const suggestionsList = [
+                "Banteay Meanchey",
+                "Battambang",
+                "Kampong Cham",
+                "Kampong Chhnang",
+                "Kampong Speu",
+                "Kampong Thom",
+                "Kampot",
+                "Kandal",
+                "Koh Kong",
+                "Kratié",
+                "Mondulkiri",
+                "Phnom Penh",
+                "Preah Vihear",
+                "Prey Veng",
+                "Pursat",
+                "Ratanakiri",
+                "Siem Reap",
+                "Preah Sihanouk",
+                "Stung Treng",
+                "Svay Rieng",
+                "Takéo",
+                "Oddar Meanchey",
+                "Kep",
+                "Pailin",
+                "Tboung Khmum"
+            ];
+    
+            function filterFunction() {
+                const input = document.getElementById('searchInput');
+                const filter = input.value.toLowerCase();
+                const suggestions = document.getElementById('suggestions');
+                suggestions.innerHTML = ''; // Clear previous suggestions
+    
+                if (filter) {
+                    const filteredSuggestions = suggestionsList.filter(item => item.toLowerCase().includes(filter));
+                    filteredSuggestions.forEach(item => {
+                        const suggestionItem = document.createElement('div');
+                        suggestionItem.textContent = item;
+                        suggestionItem.onclick = function () {
+                            input.value = item; // Set input value to suggestion
+                            suggestions.innerHTML = ''; // Clear suggestions
+                        };
+                        suggestions.appendChild(suggestionItem);
+                    });
+                }
+            }
+        </script>
+
+        <div class="p-search">
+            <p>Search for more detailed insights on our topics.</p>
+        </div>      
+    </div>
+
+    <div class="Content-text">
+        <h3>Sign up now to receive the latest updates and exclusive offers! &nbsp;&nbsp;
+            <a href="login.html" class="sign-in">Sign In</a>
+        </h3>
+        
+    </div>
+
+    <div class="slider">
+            
+        <div class="slide-track">
+            <div class="pic">
+                <img src="Image/Banteay Meanchey.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Battambang.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Kampong Cham.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Kampong Chhnang.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Kampong Speu.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Kampong Thom.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Kampot.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Kandal.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Kep.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Koh Kong.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Kratié.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Mondulkiri.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Oddar Meanchey.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Pailin.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Phnom Penh.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Preah Sihanouk.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Preah Vihear.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Prey Veng.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Pursat.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Ratanakiri.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Siem Reap.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Stung Treng.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Svay Rieng.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Takéo.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Tboung Khmum.png" alt="">
+            </div>
+
+            <div class="pic">
+                <img src="Image/Banteay Meanchey.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Battambang.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Kampong Cham.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Kampong Chhnang.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Kampong Speu.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Kampong Thom.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Kampot.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Kandal.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Kep.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Koh Kong.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Kratié.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Mondulkiri.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Oddar Meanchey.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Pailin.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Phnom Penh.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Preah Sihanouk.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Preah Vihear.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Prey Veng.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Pursat.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Ratanakiri.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Siem Reap.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Stung Treng.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Svay Rieng.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Takéo.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Tboung Khmum.png" alt="">
+            </div>
+
+            <div class="pic">
+                <img src="Image/Banteay Meanchey.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Battambang.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Kampong Cham.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Kampong Chhnang.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Kampong Speu.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Kampong Thom.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Kampot.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Kandal.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Kep.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Koh Kong.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Kratié.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Mondulkiri.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Oddar Meanchey.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Pailin.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Phnom Penh.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Preah Sihanouk.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Preah Vihear.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Prey Veng.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Pursat.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Ratanakiri.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Siem Reap.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Stung Treng.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Svay Rieng.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Takéo.png" alt="">
+            </div>
+            <div class="pic">
+                <img src="Image/Tboung Khmum.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="Footer">
+        <div class="Footer-Logo">
+            <div class="Logo">
+                <img src="Image/Angkorwat-Logo.png" alt="">
+            </div>
+        </div>
+              
+        <div class="Footer-Container">
+            <div class="Footer-Section">           
+                <h3>About Us</h3>
+                <p>We are Group SU34, a team of four students who built this Cambodia Tourism Website for our WBD project. Our goal is to help travelers discover Cambodia's amazing culture, history, and destinations.</p>
+            </div>
+            <div class="Footer-Section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="info.html">More...</a></li>
+                </ul>
+            </div>
+            <div class="Footer-Section">
+                <h3>Contact Us</h3>
+                <p>Email: contact@gamil.com</p>
+                <p>Phone: +123 456 7890</p>
+            </div>
+            <div class="Footer-Section">
+                <h3>Follow Us</h3> <br>
+                <div class="social-icons">
+                    <a href="https://www.Facebook.com" target="_blank"><img src="Image/facebook-logo.png" alt="Facebook"></a>
+                    <a href="https://www.Twitter.com" target="_blank"><img src="Image/twitter-logo.png" alt="Twitter"></a>
+                    <a href="https://www.Instagram.com" target="_blank"><img src="Image/instagram-logo.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="Footer-Bottom">
+            <p>&copy; 2024 Cambodia Website. All rights reserved.</p>
+        </div>
+    </div>
+
+</body>
+</html>

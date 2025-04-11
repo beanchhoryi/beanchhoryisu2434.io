@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="CSS/signUp.css">
+</head>
+<body>
+    <div class="Container">
+        <div class="SignUp">
+            <form action="">
+                <h2>Sign Up</h2>
+                <div class="input-group">
+                    <input type="text" required>
+                    <label for="Username">Frist Name</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" required>
+                    <label for="Username">Last Name</label>
+                </div>
+                <div class="Birthday">
+                    <div class="Month">
+                        <fieldset>
+                            <legend style="color: white;">Month</legend>
+                            <select name="item" id="">
+                                <option value="January">January</option>
+                                <option value="Fabruary">Fabruary</option>
+                                <option value="March">March</option>
+                                <option value="April">April</option>
+                                <option value="May">May</option>
+                                <option value="June">June</option>
+                                <option value="July">July</option>
+                                <option value="August">August</option>
+                                <option value="September">September</option>
+                                <option value="October">October</option>
+                                <option value="November">November</option>
+                                <option value="December">December</option>
+                            </select>
+                        </fieldset>
+                    </div>
+                    <div class="Date">
+                        <fieldset>
+                            <legend style="color: white;">Day</legend>
+                            <input type="number" maxlength="2" required>
+                        </fieldset>
+                    </div>
+                    <div class="Year">
+                        <fieldset>
+                            <legend style="color: white;">Year</legend>
+                            <input type="number" maxlength="4" required>
+                        </fieldset>
+                    </div>
+                </div> <br>
+                <div class="Gender">
+                    <fieldset>
+                        <legend style="color: white;">Gender</legend>
+                        <select name="item" id="">
+                            <option value="Female">Female</option>
+                            <option value="Male">Male</option>
+                            <option value="Other">Other</option>
+                        </select>   
+                    </fieldset>
+                </div>              
+                <button type="submit"><a href="login.html">Next</a></button>
+            </form>
+        </div>
+    </div> 
+</body>
+</html>
